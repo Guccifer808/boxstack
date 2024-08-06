@@ -1,0 +1,48 @@
+@tailwind base;
+
+@font-face {
+  font-family: 'Mona Sans';
+  font-weight: 200 900;
+  font-display: block;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
+}
+
+@media (max-width: 1024px) {
+  .slick-prev,
+  .slick-next,
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+/* Custom CSS for larger screens */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 34px !important;
+  color: #0077be !important;
+}
+.slick-next {
+  right: 2% !important;
+  z-index: 10;
+}
+.slick-prev {
+  left: 2% !important;
+  z-index: 10;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #0077be !important;
+}
+
+.slide {
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 380px) {
+  .slide {
+    margin-bottom: -15%;
+  }
+}
