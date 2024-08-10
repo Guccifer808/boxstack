@@ -24,6 +24,9 @@ import SimpleSlider from '@/components/SimpleSlider'
 import { allBrandsData } from '@/data/allBrandsData'
 
 const clients = await loadBrandData('data')
+// console.log(clients)
+
+const limitedObject = clients.slice(0, 16)
 
 function Clients({ params }) {
   const t = useTranslation(params.lang)
@@ -41,7 +44,8 @@ function Clients({ params }) {
             role="list"
             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
-            {clients.map((client) => (
+            {/* {clients.map((client) => ( */}
+            {limitedObject.map((client) => (
               <li
                 key={client.id}
                 className="flex flex-col items-start justify-center"
@@ -115,15 +119,15 @@ function Services({ params }) {
             <ListItem title={t('homePage.servicesFourTitle')}>
               {t('homePage.servicesFourDesc')}
             </ListItem>
-            <ListItem title={t('homePage.servicesFiveTitle')}>
+            {/* <ListItem title={t('homePage.servicesFiveTitle')}>
               {t('homePage.servicesFiveDesc')}
-            </ListItem>
-            <ListItem title={t('homePage.servicesSixTitle')}>
+            </ListItem> */}
+            {/* <ListItem title={t('homePage.servicesSixTitle')}>
               {t('homePage.servicesSixDesc')}
             </ListItem>
             <ListItem title={t('homePage.servicesSevenTitle')}>
               {t('homePage.servicesSevenDesc')}
-            </ListItem>
+            </ListItem> */}
           </List>
         </div>
       </Container>
@@ -281,7 +285,7 @@ import prunusSlide1 from '@/images/brandsImages/prunusSlide1.png'
 export default async function Home({ params }) {
   const t = useTranslation(params.lang)
   const allBrands = await loadBrandData('data')
-  const brands = allBrands.slice(0, 6)
+  const brands = allBrands.slice(0, 4)
   const yearsOfService = getYearsOfService()
 
   const slides = [
@@ -305,11 +309,11 @@ export default async function Home({ params }) {
             </p>
           </FadeIn>
         </Container>
-        <SimpleSlider
+        {/* <SimpleSlider
           slides={slides}
           className="relative -mb-14 mt-10 rounded rounded-b-lg bg-blue-950 sm:-mb-20 sm:mt-14 md:-mt-24"
           showArrows={true}
-        />
+        /> */}
       </section>
       <Culture params={params} />
       {/* <div className="mt-24 sm:mt-32 md:mt-56"> */}

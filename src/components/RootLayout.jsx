@@ -137,10 +137,13 @@ function Navigation({ params }) {
         </NavigationItem>
       </NavigationRow>
       <NavigationRow>
-        <NavigationItem href={`/${params.lang}/process`}>
+        {/* <NavigationItem href={`/${params.lang}/files`}>
           {t('header.files')}
+        </NavigationItem> */}
+        <NavigationItem href={`/${params.lang}/process`}>
+          {t('header.process')}
         </NavigationItem>
-        <NavigationItem href={`/${params.lang}/files`}>
+        <NavigationItem href={`/${params.lang}/contact`}>
           {t('header.contact')}
         </NavigationItem>
       </NavigationRow>

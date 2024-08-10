@@ -21,7 +21,7 @@ function BrandsSection({ brands, params }) {
         <p>{t('homePage.brandsSubtitle')}</p>
       </SectionIntro>
       <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {brands?.map((brand) => (
             <FadeIn key={brand.href} className="flex">
               <BrandsCard brand={brand} t={t} lang={params.lang} />
